@@ -8,9 +8,9 @@ use Data::Dump;
 	#EDITAR ESTA INFORMACION
 my $nick='apt';
 my $twitUser='debian_ve';
-my $twitPass='d3b14n1t4s';
+my $twitPass='';
 my $identiUser='debianvebot';
-my $identiPass='d3b14n174';
+my $identiPass='';
 my $servidorIRC='irc.debian.org';
 #my $servidorIRC='irc.unplug.org.ve';
 my $canalesIRC=[ '#debian-ve' ];
