@@ -2,17 +2,17 @@
 package TwitBot;
 use strict;
 use warnings;
-use Net::Twitter;
-use base qw( Bot::BasicBot );
+use Net::Twitter::Lite;
+use base qw( Bot::BasicBot::Pluggable );
 
 	#EDITAR ESTA INFORMACION
 my $nick='twitica';
-my $twitUser='';
+my $twitUser='twitbot1';
 my $twitPass='';
-my $identiUser='';
+my $identiUser='overflow';
 my $identiPass='';
-my $servidorIRC='';
-my $canalesIRC=[ 'canal1','canal2' ];
+my $servidorIRC='localhost';
+my $canalesIRC=[ '#unixve' ];
 sub said
 {
 	my $self=shift;
@@ -72,8 +72,8 @@ sub new
 		my $class=shift;
 		my $self=$class->SUPER::new(@_);
 		
-		$self->{twit}= Net::Twitter->new({username=>$twitUser,password=>$twitPass}) if ($twitUser);
-		$self->{iden}= Net::Twitter->new({username=>$identiUser,password=>$identiPass,identica=>1}) if ($identiUser);
+#		$self->{twit}= Net::Twitter::Lite->new({username=>$twitUser,password=>$twitPass}) if ($twitUser);
+#		$self->{iden}= Net::Twitter::Lite->new({username=>$identiUser,password=>$identiPass,identica=>1}) if ($identiUser);
 		$self->{status}="";
 		bless ($self,$class);
 		return $self;
